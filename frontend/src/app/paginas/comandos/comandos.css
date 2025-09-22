@@ -1,0 +1,11 @@
+.contenedor {
+  display: flex;
+  flex-direction: column; /* 🔽 coloca una fila debajo de otra */
+  gap: 8px;               /* espacio entre pregunta y respuesta */
+}
+
+.fila {
+  display: flex;
+  align-items: center;    /* centra texto con icono */
+  gap: 6px;               /* espacio entre icono y texto */
+}

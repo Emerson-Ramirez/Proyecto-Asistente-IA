@@ -1,0 +1,41 @@
+::ng-deep body {
+  margin: 0;
+}
+
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(135deg, #2196f3, #21cbf3);
+}
+
+.login-card {
+  width: 100%;
+  max-width: 400px;
+  padding: 24px;
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
+  background-color: white;
+  color: #333;
+}
+
+.full-width {
+  width: 100%;
+  margin-bottom: 16px;
+}
+
+.text-center {
+  text-align: center;
+}
+
+mat-card-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+mat-card-header mat-icon {
+  background-color: #1976d2;
+  color: white;
+  border-radius: 30%;
+}

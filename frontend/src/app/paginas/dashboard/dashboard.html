@@ -1,0 +1,40 @@
+<!-- Material Icons -->
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+<!--Contenedor principal -->
+<div class="main-container">
+    <!-- Barra superior -->
+    <mat-toolbar class="header">
+        <span  class = "espacio"> </span> 
+        <span class="title">Chat inteligente</span>
+        <span  class = "espacio"> </span> 
+        <button mat-raised-button class="exit-btn" (click)="Logout()">
+            <mat-icon>logout</mat-icon>
+            Salir
+        </button>
+    </mat-toolbar>
+
+    <!-- Contenedor secundario -->
+    <div class="second-container">
+        <!-- Botones de navegación -->
+        <mat-button-toggle-group [value]="selected" appearance="legacy" class="tab-buttons" [disabled]="true">
+            <span  class = "espacio"> </span>
+            <mat-button-toggle value="teoria"><mat-icon>book</mat-icon> Teoría</mat-button-toggle>
+            <mat-button-toggle value="desafios"><mat-icon>build</mat-icon> Desafío</mat-button-toggle>
+            <mat-button-toggle value="errores"><mat-icon>bug_report</mat-icon> Errores comunes</mat-button-toggle>
+            <mat-button-toggle value="comandos"><mat-icon>code</mat-icon> Comandos</mat-button-toggle>
+            <span  class = "espacio"> </span>
+        </mat-button-toggle-group>
+
+        <!-- Área de contenido -->
+        <div class="content-box">
+            <router-outlet></router-outlet>
+        </div>
+
+        <!-- Área de chat -->
+        <div class="chat-box">
+            <input [(ngModel)]="query" placeholder="Escribe tu pregunta..." />
+            <button (click)="ask()">Preguntar</button>
+        </div>
+    </div>
+</div>

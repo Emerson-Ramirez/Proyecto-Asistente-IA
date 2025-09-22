@@ -1,0 +1,38 @@
+<!-- Roboto font -->
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet">
+
+<!-- Material Icons -->
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+<div class="login-container">
+  <mat-card class="login-card">
+    <mat-card-header>
+      <div mat-card-avatar class="login-icon">
+        <mat-icon>lock</mat-icon>
+      </div>
+      <mat-card-title>Iniciar Sesión</mat-card-title>
+    </mat-card-header>
+
+    <mat-card-content>
+      <form [formGroup]="loginForm">
+        <mat-form-field appearance="fill" class="full-width">
+          <mat-label>Usuario</mat-label>
+          <input matInput placeholder="Correo o nombre de usuario" formControlName="EmailId">
+          <mat-icon matSuffix>person</mat-icon>
+        </mat-form-field>
+
+        <mat-form-field appearance="fill" class="full-width">
+          <mat-label>Contraseña</mat-label>
+          <input matInput type="password" placeholder="Contraseña" formControlName="Password">
+          <mat-icon matSuffix>lock</mat-icon>
+        </mat-form-field>
+
+        <button mat-raised-button color="primary" class="full-width" (click)="onLogin()">Ingresar</button>
+      </form>
+    </mat-card-content>
+
+    <mat-card-actions class="text-center">
+      <a mat-button color="accent">¿Olvidaste tu contraseña?</a>
+    </mat-card-actions>
+  </mat-card>
+</div>
